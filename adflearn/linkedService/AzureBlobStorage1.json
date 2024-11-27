@@ -5,15 +5,8 @@
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"connectionString": {
-				"type": "AzureKeyVaultSecret",
-				"store": {
-					"referenceName": "AzureKeyVault1",
-					"type": "LinkedServiceReference"
-				},
-				"secretName": "trainingsecret",
-				"secretVersion": "version1.2"
-			}
+			"serviceEndpoint": "https://tra1storage.blob.core.windows.net/",
+			"accountKind": "StorageV2"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/linkedservices"
