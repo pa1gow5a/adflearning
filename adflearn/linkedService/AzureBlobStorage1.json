@@ -1,13 +1,20 @@
 {
 	"name": "AzureBlobStorage1",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"description": "test1",
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"connectionString": "DefaultEndpointsProtocol=https;AccountName=tra1storage;EndpointSuffix=core.windows.net;",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEM5QUU0NUE5LTM4QkEtNEI4MC1BQUE3LTJFN0EwQjJEMEFBNV83YTZjZjc2Yi1hYzUxLTRjOGItOTEyMy0yMTA3YmMxZTM4YWUiDQp9"
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "trainingsecret",
+				"secretVersion": "version1.2"
+			}
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
