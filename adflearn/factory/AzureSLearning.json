@@ -1,0 +1,9 @@
+{
+	"name": "AzureSLearning",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2a51da0d-be18-41f4-9608-b4d168137c8d",
+		"tenantId": "aa0d7259-b0e2-4bba-86af-32820a96d523"
+	}
+}
